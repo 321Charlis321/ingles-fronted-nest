@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "651448081afbe087dbe2a940"
+  },
+  "ingles": "frank",
+  "spanish": "ploplpoplop",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6514482f1afbe087dbe2a942"
+  },
+  "ingles": "Gibran",
+  "spanish": "ploplpoplop",
+  "__v": 0
+}]
