@@ -6,7 +6,7 @@ const routes: Routes =
   [
     {
       path: '',
-      loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
+      loadChildren: () => import('./frases/frases.module').then(m => m.FrasesModule),
     },
     {
       path: '404',
@@ -14,7 +14,7 @@ const routes: Routes =
     },
     {
       path: '',
-      redirectTo: 'home',
+      redirectTo: 'frases',
       pathMatch: 'full'
     }, {
       path: '**',
@@ -23,7 +23,7 @@ const routes: Routes =
   ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

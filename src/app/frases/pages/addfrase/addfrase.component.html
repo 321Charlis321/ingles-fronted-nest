@@ -1,0 +1,94 @@
+<h1>
+  {{currentFrase._id ? 'Editar' : 'Agregar' }}
+  Frase
+
+
+
+</h1>
+<!-- <h4>{{idb._id}}</h4> -->
+<div class="container grid">
+  <div class="col-12 sm:col-6">
+    <!-- <div class="card  mb-3 text-center">
+      <div class="card-body"> -->
+
+
+    <form autocomplete="off" novalidate class="grid" [formGroup]="fraseForm" (ngSubmit)="onSubmit()">
+
+      <!-- Ingles -->
+
+      <!-- <div class="mb-3 row">
+        <label class="col-sm-1 col-form-label">Id</label>
+        <div class="col-sm-6">
+          <input class="form-control" placeholder="Enter the phrase" formControlName="_id">
+
+        </div>
+      </div> -->
+
+      <div class="mb-3 row">
+        <label class="col-sm-1 col-form-label">Ingles</label>
+        <div class="col-sm-6">
+          <input class="form-control" placeholder="Enter the phrase" formControlName="ingles">
+
+        </div>
+      </div>
+
+      <!-- Agregar Favorito -->
+      <div class="mb-3 row">
+        <label class="col-sm-1 col-form-label">Español</label>
+        <div class="col-sm-6">
+          <input class="form-control" placeholder="Ingrese la frase" formControlName="spanish">
+
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label class="col-sm-1 col-form-label">Opcion 1 </label>
+        <div class="col-sm-6">
+          <input class="form-control" placeholder="Ingrse una oracion para responder su frase"
+            formControlName="opcion1">
+
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-sm-1 col-form-label">Opcion2 </label>
+        <div class="col-sm-6">
+          <input class="form-control" placeholder="Ingrse una oracion para responder su frase"
+            formControlName="opcion2">
+
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label class="col-sm-1 col-form-label">Opcion 3 </label>
+        <div class="col-sm-6">
+          <input class="form-control" placeholder="Ingrse una oracion para responder su frase"
+            formControlName="opcion3">
+
+        </div>
+      </div>
+
+
+
+
+    </form>
+    <div class="flex justify-content-between">
+
+      <button type="submit" *ngIf="no" class="btn btn-warning " (click)="onSubmit()">
+        <!-- [disabled]="myForm.invalid" -->
+        Update
+      </button>
+      <span></span>
+
+      <button type="submit" *ngIf="!no" class="btn btn-primary" (click)="guardar()">
+        <!-- [disabled]="myForm.invalid" -->
+        Guardar
+      </button>
+
+
+    </div>
+
+
+
+
+    <!-- </div> -->
+  </div>
+</div>

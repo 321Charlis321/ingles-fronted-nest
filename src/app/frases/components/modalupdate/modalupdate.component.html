@@ -1,0 +1,37 @@
+<div class="table-responsive mt-5">
+
+  <table class="table table-bordered table-sm border-primary">
+    <thead class="text-center">
+      <tr>
+        <th class="text-center">#</th>
+        <th>Ingles</th>
+        <th>Spanish</th>
+        <th>Question 1</th>
+        <th>Question 2</th>
+        <th>Question 3</th>
+        <th></th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let frase of frases ,let i =index">
+        <td class="fw-bold"> {{i+1}}</td>
+        <td>{{frase.ingles}}</td>
+        <td>{{frase.spanish}}</td>
+        <td>{{frase.opcion1}}</td>
+        <td>{{frase.opcion2}}</td>
+        <td>{{frase.opcion3}}</td>
+        <td>
+          <button class=" btn text-bg-warning " [routerLink]="['/edit',frase._id]">Edit</button>
+
+          <button class=" btn text-bg-danger mx-3" (click)="onDeleteHero(frase)">Remove</button>
+          <!-- <a [routerLink]="['/edit', frase._id]">Edit</a> -->
+
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+</div>
